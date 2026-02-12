@@ -49,11 +49,12 @@ def filter_user(user_list,filters,page,size):
                 filtered_user.append(user)
 
     total_filtered_user=len(filtered_user)
-    start=(page-1)*size
+    start=(page*size)-size
+    # start=(page-1)*size (or) start= (page*size)-size
     end=start+size
     paginating=filtered_user[start:end]
-
-    total_pages=(total_filtered_user+size-1)//size
+    total_pages=(total_filtered_user//size)+1
+    # total_pages=(total_filtered_user+size-1)//size (or) total_pages=(total_filtered_user//size)+1
     print(total_pages)
     return (
         paginating, 
