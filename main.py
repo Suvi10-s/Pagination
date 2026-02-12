@@ -53,8 +53,7 @@ def filter_user(user_list,filters,page,size):
     # start=(page-1)*size (or) start= (page*size)-size
     end=start+size
     paginating=filtered_user[start:end]
-    total_pages=(total_filtered_user//size)+1
-    # total_pages=(total_filtered_user+size-1)//size (or) total_pages=(total_filtered_user//size)+1
+    total_pages=(total_filtered_user+size-1)//size
     print(total_pages)
     return (
         paginating, 
