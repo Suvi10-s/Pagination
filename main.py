@@ -1,3 +1,6 @@
+# Write a Python function to filter a list of users using conditions like equals (=) and not equals (!=) on fields such as name, email,role and is_active.
+# The function should support pagination using page and size parameters.
+# Return the paginated result along with total record count and total pages.
 users = [
     {"name":"Arun Kumar","email":"arun.kumar@mail.com","role":"admin","is_active":True},
     {"name":"Priya Sharma","email":"priya.sharma@mail.com","role":"user","is_active":True},
